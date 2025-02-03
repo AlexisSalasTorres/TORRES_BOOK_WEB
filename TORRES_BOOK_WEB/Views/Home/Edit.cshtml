@@ -1,0 +1,23 @@
+﻿@model BookstoreApp.Models.Book
+
+<h2>Edit Book</h2>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="form-group">
+        <label>Title:</label>
+        <input type="text" class="form-control" name="Title" value="@Model.Title" required>
+    </div>
+    <div class="form-group">
+        <label>Author:</label>
+        <input type="text" class="form-control" name="Author" value="@Model.Author" required>
+    </div>
+    <div class="form-group">
+        <label>Price:</label>
+        <input type="number" class="form-control" name="Price" value="@Model.Price" required>
+    </div>
+    <div class="form-group">
+        <label>Publication Year:</label>
+        <input type="number" class="form-control" name="PublicationYear" value="@Model.PublicationYear" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

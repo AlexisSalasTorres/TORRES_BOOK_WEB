@@ -1,0 +1,26 @@
+﻿@model List<BookstoreApp.Models.Book>
+
+<h2>Book List</h2>
+<a href="/Home/Create" class="btn btn-primary">Add New Book</a>
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Publication Year</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author</td>
+            <td>@book.Price</td>
+            <td>@book.PublicationYear</td>
+            <td>
+                <a href="/Home/Edit/@book.Id" class="btn btn-warning">Edit</a>
+                <a href="/Home/Delete/@book.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
